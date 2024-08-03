@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="container mb-5">
+        <h3 class="subtitle pb-4 mb-4 border-bottom">Edit your form</h3>
+
+        <article class="form-blog bg-body-secondary p-4 rounded">
+            <form action="/update" method="post">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label class="form-label">Author Name</label>
+                        <input type="text" class="form-control" placeholder="Robert Smith" name="update_name" required>
+                    </div>
+                    <div class="col">
+                        <label class="form-label">Theme</label>
+                        <input type="text" class="form-control" placeholder="Technology" name="update_theme" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input type="text" class="form-control" placeholder="Nano tech and Human Body" name="update_title" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Body Blog</label>
+                    <textarea class="form-control" rows="3" name="update_text" required></textarea>
+                </div>
+
+                <button class="myButton btn btn-outline-secondary" type="submit">Edit Blog</button>
+            </form>
+        </article>
+    </div>

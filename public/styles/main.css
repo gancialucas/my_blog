@@ -1,0 +1,62 @@
+.title {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 3rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+footer p {
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 2rem;
+}
+
+footer a {
+    color: #F5004F;
+    text-decoration: underline;
+}
+
+.intro-section {
+    box-shadow: 15px 10px black;
+}
+
+.intro-text h1 {
+    font-family: 'Abril Fatface', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .img-blog {
+        display: none !important;
+    }
+}
+
+.myButton {
+    box-shadow: 5px 5px 1px black;
+}
+.myButtonDelete {
+    box-shadow: 5px 5px 1px red;
+}
+
+input, textarea {
+    border: 2px solid black !important;
+}
+
+.check-blog {
+    box-shadow: 5px 5px 1px black;
+}
+
+.form-blog {
+    box-shadow: 5px 5px 1px black;
+}

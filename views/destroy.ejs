@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="container mb-5">
+        <h3 class="subtitle pb-4 mb-4 border-bottom">Delete your Blog</h3>
+
+        <article class="form-blog bg-body-secondary p-4 rounded">
+            <form action="/delete" method="post">
+                <div class="text-center">
+                    <p class="fs-4">Are you about to delete your blog, are you sure?</p>
+                    <button class="myButtonDelete btn btn-outline-secondary" type="submit">Delete Blog</button>
+                </div>
+            </form>
+        </article>
+    </div>

@@ -1,0 +1,85 @@
+<%- include('partials/header.ejs') %>
+
+    <!-- Introduction Section -->
+    <div class="container">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 border-bottom mb-5">
+            <div class="col-10 col-sm-8 col-lg-6 img-blog ">
+                <img src="/imgs/bg_blog.jpg" class="d-block mx-lg-auto img-fluid rounded" alt="Image blog presentation"
+                    width="700" height="500" loading="lazy">
+            </div>
+
+            <div class="col-lg-6 intro-text">
+                <h1 class="display-3 fw-bold text-body-emphasis lh-1 mb-3">
+                    Write your blog about the topic you like the most!
+                </h1>
+
+                <p>
+                    Here, you can <u>create and share</u> your own stories, ideas and knowledge with <u>a global
+                        community</u>. Whether you're interested in technology, fashion, cooking, travel or anything
+                    else, this is your chance to <u>become a recognized author</u>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body Blog Section -->
+
+    <div class="container mb-5">
+        <h3 class="subtitle pb-4 mb-4 border-bottom">Fill out the form</h3>
+
+        <article class="form-blog bg-body-secondary p-4 rounded">
+            <form action="/submit" method="post">
+                <div class="row mb-3">
+                    <div class="col">
+                        <label class="form-label">Author Name</label>
+                        <input type="text" class="form-control" placeholder="Robert Smith" name="name" required>
+                    </div>
+                    <div class="col">
+                        <label class="form-label">Theme</label>
+                        <input type="text" class="form-control" placeholder="Technology" name="theme" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Title</label>
+                    <input type="text" class="form-control" placeholder="Nano tech and Human Body" name="title" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Body Blog</label>
+                    <textarea class="form-control" rows="3" name="text" required></textarea>
+                </div>
+
+                <button class="myButton btn btn-outline-secondary" type="submit">Send My Blog</button>
+            </form>
+        </article>
+    </div>
+
+    <div class="container">
+        <div class="position-sticky" style="top: 2rem;">
+            <div class="check-blog p-4 mb-5 bg-body-secondary rounded">
+                <h4 class="subtitle">Check out your blogs</h4>
+                <p>Below you can find the blogs you have written. Write non-stop and reach as far as possible.</p>                
+            </div>
+            
+            <div>
+                <% if (locals.blog) { %>
+                    <h4 class="fst-italic"><u>Recent posts</u></h4>
+
+                    <div class="py-3 border-top">
+                        <h6 class="mb-0 fs-3"><%= blog.title %></h6>
+                        <small class="fst-italic text-body-secondary"><u><%= blog.theme %></u></small>
+                        <p class="my-3 text-break"><%= blog.text %></p>
+                        <p class="mb-0 fst-italic"><%= blog.name %></p>
+                        <small class="text-body-secondary"><%= blog.date %></small>
+                    </div>
+
+                    <div>
+                        <a href="/edit"><button class="myButton btn btn-outline-secondary" type="submit">Edit Blog</button></a>
+                        <a href="/delete"><button class="mx-3 myButtonDelete btn btn-outline-secondary" type="submit">Delete Blog</button></a>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+<%- include('partials/footer.ejs') %>
